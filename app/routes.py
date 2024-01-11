@@ -1,3 +1,8 @@
+
+import sys
+print("Path inside routes.py within DNA tool:")
+print(sys.path)
+
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .alignment import align_sequences
 import Bio.Align as align
