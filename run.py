@@ -1,7 +1,7 @@
 from flask import Flask
 import app.routes as routes
 
-app = Flask(__name__, template_folder="app/templates", static_folder='app/static')
+app = Flask(__name__, template_folder="templates", static_folder='DNAAlignmentTool/static')
 
 app.register_blueprint(routes.dna_tool_bp)
 

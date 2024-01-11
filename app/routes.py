@@ -4,7 +4,7 @@ import Bio.Align as align
 from Bio.Align import PairwiseAligner
 
 # Create a Blueprint for the DNA tool
-dna_tool_bp = Blueprint('dna_tool', __name__)
+dna_tool_bp = Blueprint('dna_tool', __name__, template_folder='templates', static_folder='static')
 
 @dna_tool_bp.route('/')
 def dna_index():
