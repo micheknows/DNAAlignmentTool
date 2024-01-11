@@ -1,0 +1,26 @@
+.match {
+    background-color: #66ff66; /* light green for matches */
+    color: black;
+    display: inline-block; /* ensures that spans line up horizontally */
+    min-width: 1em; /* gives each base a little space */
+    text-align: center;
+}
+
+.mismatch {
+    background-color: #ff6666; /* light red for mismatches */
+    color: black;
+    display: inline-block;
+    min-width: 1em;
+    text-align: center;
+}
+
+.align {
+    display: inline-block;
+    min-width: 1em;
+    text-align: center;
+}
+
+.alignment-results {
+    font-family: monospace;
+    white-space: pre-wrap; /* preserves spaces and line breaks */
+}

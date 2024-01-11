@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Align DNA Sequences</h1>
+
+<form method="POST" action="{{ url_for('dna_tool.align') }}">
+
+  <label>DNA Sequence 1:</label>
+  <textarea name="seq1" placeholder="Enter first DNA sequence"></textarea>
+
+  <label>DNA Sequence 2:</label>
+  <textarea name="seq2" placeholder="Enter second DNA sequence"></textarea>
+
+  <button type="submit">Align</button>
+
+</form>
+
+<p>
+    Enter two raw DNA sequences in the text areas above and click Align to perform 
+    sequence alignment and view analysis.
+</p>
+
+{% endblock %}

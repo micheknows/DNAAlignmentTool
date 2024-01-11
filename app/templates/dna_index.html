@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>DNA Sequence Alignment Tool</h1>
+
+<p>This tool allows you to align two DNA sequences against each other to analyze their similarity.</p>
+
+<h2>Instructions:</h2>
+
+<ol>
+  <li>Enter two raw DNA sequences on the <a href="{{ url_for('dna_tool.align') }}">alignment form</a></li>
+  <li>Click the Align button to perform sequence alignment</li>
+  <li>View the alignment results and analysis</li>
+</ol> 
+
+<img src="{{ url_for('static', filename='images/dna.jpg') }}" width="300" height="200" alt="DNA image">
+
+<p>
+    Try it out by navigating to the <a href="{{ url_for('dna_tool.align') }}">alignment form</a>
+</p>
+
+{% endblock %}
