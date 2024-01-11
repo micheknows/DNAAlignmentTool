@@ -1,5 +1,5 @@
 from flask import Flask
-import app.routes as routes
+import dna_tool.routes as routes
 
 app = Flask(__name__, template_folder="templates", static_folder='DNAAlignmentTool/static')
 

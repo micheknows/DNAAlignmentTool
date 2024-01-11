@@ -6,7 +6,7 @@ print(sys.path)
 
 def create_app():
     # Initialize the Flask application
-    app = Flask(__name__, template_folder="templates", static_folder='DNAAlignmentTool/app/static')
+    app = Flask(__name__, template_folder="templates", static_folder='DNAAlignmentTool/dna_tool/static')
 
     # Import routes from the routes module
     from . import routes
