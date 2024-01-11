@@ -9,7 +9,7 @@ import Bio.Align as align
 from Bio.Align import PairwiseAligner
 
 # Create a Blueprint for the DNA tool
-dna_tool_bp = Blueprint('dna_tool', __name__, template_folder='templates', static_folder='static')
+dna_tool_bp = Blueprint('dna_tool2', __name__, template_folder='templates', static_folder='static')
 
 @dna_tool_bp.route('/')
 def dna_index():
@@ -114,7 +114,7 @@ def align():
         # Basic validation to check if sequences are entered
         if not seq1 or not seq2:
             flash('Please enter both sequences.')
-            return redirect(url_for('dna_tool.align'))
+            return redirect(url_for('dna_tool2.align'))
     if request.method == 'POST':
 
         # Perform alignment
