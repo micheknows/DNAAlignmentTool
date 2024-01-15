@@ -7,7 +7,7 @@ dna_tool = Blueprint('dna_tool', __name__,
                     static_folder='app/static', url_prefix='/dna-tool')
 print(dna_tool)
 
-from .app import routes
+from .dna_app import routes
 
 @dna_tool.route('/test')
 def test():
