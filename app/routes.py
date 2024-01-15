@@ -5,8 +5,6 @@ from DNAAlignmentTool import dna_tool
 from .alignment import align_sequences
 from Bio.Align import PairwiseAligner
 
-# Create a Blueprint for the DNA tool
-#dna_tool= Blueprint('dna_tool', __name__, template_folder='templates', static_folder='static')
 
 @dna_tool.route('/')
 def dna_index():
