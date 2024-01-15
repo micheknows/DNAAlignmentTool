@@ -1,17 +1,13 @@
-
-import sys
-print("Path inside routes.py within DNA tool:")
-print(sys.path)
-
 from flask import Blueprint, render_template, request, flash, redirect, url_for
+from DNAAlignmentTool import dna_tool
 from .alignment import align_sequences
 import Bio.Align as align
 from Bio.Align import PairwiseAligner
 
 # Create a Blueprint for the DNA tool
-dna_tool_bp = Blueprint('dna_tool2', __name__, template_folder='templates', static_folder='static')
+#dna_tool= Blueprint('dna_tool', __name__, template_folder='templates', static_folder='static')
 
-@dna_tool_bp.route('/')
+@dna_tool.route('/')
 def dna_index():
     # Render the index page specific to the DNA Alignment Tool
     return render_template('dna_index.html')
@@ -105,7 +101,7 @@ def build_alignment_string(alignment):
     return combined_html
 
 
-@dna_tool_bp.route('/align', methods=['GET', 'POST'])
+@dna_tool.route('/align', methods=['GET', 'POST'])
 def align():
     if request.method == 'POST':
         seq1 = request.form.get('seq1')
@@ -114,7 +110,7 @@ def align():
         # Basic validation to check if sequences are entered
         if not seq1 or not seq2:
             flash('Please enter both sequences.')
-            return redirect(url_for('dna_tool2.align'))
+            return redirect(url_for('dna_tool.align'))
     if request.method == 'POST':
 
         # Perform alignment
