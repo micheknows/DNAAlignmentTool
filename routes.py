@@ -1,9 +1,10 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from DNAAlignmentTool import dna_tool
-
+from . import dna_tool
 
 from .alignment import align_sequences
 from Bio.Align import PairwiseAligner
+
+
 
 
 @dna_tool.route('/')

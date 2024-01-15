@@ -1,15 +1,15 @@
 
 
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 dna_tool = Blueprint('dna_tool', __name__,
-                    template_folder="dna_app/templates",
-                    static_folder='dna_app/static', url_prefix='/dna-tool')
+                    template_folder="templates",
+                    static_folder='static', url_prefix='/dna_tool')
 
+from . import routes
 
-from .dna_app import routes
 
 @dna_tool.route('/test')
-def test():
-    return "DNA Blueprint Works!"
+def dna_index2():
+    return "hiya"
 
