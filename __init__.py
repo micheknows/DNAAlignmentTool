@@ -3,9 +3,9 @@
 from flask import Blueprint
 
 dna_tool = Blueprint('dna_tool', __name__,
-                    template_folder="app/templates",
-                    static_folder='app/static', url_prefix='/dna-tool')
-print(dna_tool)
+                    template_folder="dna_app/templates",
+                    static_folder='dna_app/static', url_prefix='/dna-tool')
+
 
 from .dna_app import routes
 
